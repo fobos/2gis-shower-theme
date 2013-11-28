@@ -1,0 +1,90 @@
+.slide {
+
+	h2 {
+		
+		&._pane {
+			display: inline-block;
+			background: $green;
+			color: #000;
+			padding: 0 .3em .1em;
+			margin: 0 0 0 -.3em;
+			border-radius: 6px;
+			}
+		}
+	.figure__wrap {
+		position: absolute;
+		right: 100px;
+		width: 280px;
+		text-align: center;
+		
+		.figure {
+			color: #fff;
+			font: 300 30px/32px 'Helvetica Neue', Arial, sans-serif;
+
+			.figure__num {
+				font: bold 140px/160px 'Suisse Cond';
+				}
+			.figure__caption {
+				margin: 0 0 40px;
+				}
+			}
+		}
+
+	// Subsection
+	&.subsection {
+		background: $blue;
+		color: #fff;
+
+		h2 {
+			position: absolute;
+			top: 50%;
+			right: 100px;
+			left: 100px;
+			font-size: 80px;
+			line-height: 70px;
+			margin: -35px 0 0;
+			padding: 0 0 0 70px;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: -35px;
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				border-radius: 35px;
+				background: #fff;
+				font-size: 28px;
+				line-height: 72px;
+				text-align: center;
+				text-transform: uppercase;
+				color: $blue;
+				content: '';
+				}
+			&._target:before {
+				background: #fff url(../custom/svg/subsection_target.svg) center center no-repeat;
+				}
+			&._tools:before {
+				background: #fff url(../custom/svg/subsection_tools.svg) center center no-repeat;
+				}
+			&._research:before {
+				background: #fff url(../custom/svg/subsection_research.svg) center center no-repeat;
+				}
+			&._font:before {
+				content: 'font';
+				}
+			&._png:before {
+				content: 'png';
+				}
+			&._svg:before {
+				content: 'svg';
+				}
+			&._integration:before {
+				background: #fff url(../custom/svg/subsection_integration.svg) center center no-repeat;
+				}
+			&._future:before {
+				background: #fff url(../custom/svg/subsection_future.svg) center center no-repeat;
+				}
+			}
+		}
+	}

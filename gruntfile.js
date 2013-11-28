@@ -45,6 +45,24 @@ module.exports = function(grunt) {
                     interrupt: true
                 }
             }
+        },
+
+        sprite: {
+            regular: {
+                src: [
+                    'tmp/src/*',
+                    '!tmp/src/*@*',
+                    // '!tmp/src/_*',
+                    // '!tmp/src/promo_*'
+                ],
+                algorithm: 'binary-tree',
+                destImg: 'tmp/dest/sprite.png',
+                destCSS: 'tmp/dest/sprite.less',
+                engine: 'gm',
+                engineOpts: {
+                    imagemagick: true
+                }
+            }
         }
 
     });
@@ -53,6 +71,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-csso');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-spritesmith');
 
     // Tasks
 

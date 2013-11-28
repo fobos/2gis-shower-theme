@@ -2,4 +2,8 @@
 npm-debug.log
 /build
 /node_modules
+/tmp
 .sass-cache
+chaptykov.html
+/custom
+/pictures
